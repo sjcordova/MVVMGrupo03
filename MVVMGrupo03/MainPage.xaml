@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:MVVMGrupo03.ViewModels"
+             x:Class="MVVMGrupo03.MainPage">
+
+
+    <ContentPage.BindingContext>
+        <local:CambioDivisasViewModel />
+    </ContentPage.BindingContext>
+        
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Entry
+                  x:Name="EntryDolares"
+                  Placeholder="Ingrese el valor en dolares"
+                  Text="{Binding ValorDolares}" />
+
+            <Entry
+                x:Name="EntryEuros"
+                Placeholder="Ingrese el valor en euros"
+                Text="{Binding ValorEuros}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
